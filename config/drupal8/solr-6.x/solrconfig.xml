@@ -992,7 +992,7 @@
     </lst>
     <lst name="slave">
       <str name="enable">${solr.replication.slave:false}</str>
-      <str name="masterUrl">${solr.replication.masterUrl:http://localhost:8983/solr}/replication</str>
+      <str name="masterUrl">${solr.replication.masterUrl:http://localhost:8984/solr}/replication</str>
       <str name="pollInterval">${solr.replication.pollInterval:00:00:60}</str>
     </lst>
   </requestHandler>
