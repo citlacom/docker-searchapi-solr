@@ -22,4 +22,4 @@ docker cp ./data temporal:/search/data
 docker start temporal
 
 echo "Composing '${SERVICE_NAME}' service container."
-docker-compose up ${SERVICE_NAME}
+docker-compose up -d ${SERVICE_NAME}
