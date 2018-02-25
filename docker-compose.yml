@@ -1,0 +1,10 @@
+version: '2'
+services:
+  solr_d7:
+    image: solr:6.6
+    ports:
+     - "8983:8983"
+    volumes:
+      - ./config/drupal7/core.properties:/opt/solr/server/solr/mycores/search/core.properties
+      - ./config/drupal7/solr-6.x:/opt/solr/server/solr/mycores/search/conf
+      - ./data:/opt/solr/server/solr/mycores/search/data
