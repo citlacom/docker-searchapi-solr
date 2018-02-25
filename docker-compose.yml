@@ -6,6 +6,12 @@ services:
      - "8983:8983"
     volumes:
     - volume_core1_d7:/opt/solr/server/solr/mycores
+  core2_d7:
+    image: solr:6.6
+    ports:
+     - "8982:8982"
+    volumes:
+    - volume_core2_d7:/opt/solr/server/solr/mycores
   core1_d8:
     image: solr:6.6
     ports:
