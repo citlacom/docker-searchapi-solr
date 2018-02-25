@@ -5,9 +5,7 @@ services:
     ports:
      - "8983:8983"
     volumes:
-      - ./config/drupal7/core.properties:/opt/solr/server/solr/mycores/search/core.properties
-      - ./config/drupal7/solr-6.x:/opt/solr/server/solr/mycores/search/conf
-      - ./data:/opt/solr/server/solr/mycores/search/data
+    - volume_core1_d7:/opt/solr/server/solr/mycores
   core1_d8:
     image: solr:6.6
     ports:
@@ -16,3 +14,6 @@ services:
       - ./config/drupal8/core.properties:/opt/solr/server/solr/mycores/search/core.properties
       - ./config/drupal8/solr-6.x:/opt/solr/server/solr/mycores/search/conf
       - ./data:/opt/solr/server/solr/mycores/search/data
+volumes:
+  volume_core1_d7:
+    external: true
